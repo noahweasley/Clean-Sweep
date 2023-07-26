@@ -1,4 +1,4 @@
-# Vaporize
+# Empty-Erase
 
 > A simple script when executed, deletes all empty files and folders in a target directory
 
@@ -7,13 +7,13 @@
 ### Installation
 
 ```bash
-npm install vaporize -g
+npm install empty-erase -g
 ```
 
 ### Usage
 
 ```bash
-vaporize <path/to/directory>
+empty-erase <path/to/directory>
 ```
 
 **The first argument is the path to the directory in which the operation would be performed**
@@ -21,5 +21,5 @@ vaporize <path/to/directory>
 ### Example
 
 ```bash
-vaporize ./music
+empty-erase ./music
 ```

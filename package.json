@@ -1,5 +1,5 @@
 {
-  "name": "vaporize",
+  "name": "empty-erase",
   "version": "0.0.1",
   "description": "A simple script when executed, deletes all empty files and folders in a target directory",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/noahweasley/Vaporize.git"
+    "url": "https://github.com/noahweasley/empty-erase.git"
   },
   "keywords": [
     "commander",
