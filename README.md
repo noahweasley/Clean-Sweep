@@ -1,4 +1,4 @@
-# Empty-Erase
+# clean-sweep
 
 > A simple script when executed, deletes all empty files and folders in a target directory
 
@@ -7,13 +7,13 @@
 ### Installation
 
 ```bash
-npm install empty-erase -g
+npm install clean-sweep -g
 ```
 
 ### Usage
 
 ```bash
-empty-erase <path/to/directory>
+clean-sweep <path/to/directory>
 ```
 
 **The first argument is the path to the directory in which the operation would be performed**
@@ -21,5 +21,5 @@ empty-erase <path/to/directory>
 ### Example
 
 ```bash
-empty-erase ./music
+clean-sweep ./music
 ```

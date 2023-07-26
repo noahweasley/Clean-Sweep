@@ -1,10 +1,10 @@
 {
-  "name": "empty-erase",
-  "version": "0.0.4",
+  "name": "clean-sweep",
+  "version": "0.0.5",
   "description": "A simple script when executed, deletes all empty files and folders in a target directory",
   "main": "index.js",
   "bin": {
-    "empty-erase": "index.js",
+    "clean-sweep": "index.js",
     "erase": "index.js"
   },
   "scripts": {
@@ -12,9 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/noahweasley/empty-erase.git"
+    "url": "https://github.com/noahweasley/Clean-Sweep.git"
   },
   "keywords": [
+    "clean",
+    "sweep",
     "erase",
     "delete",
     "empty",
