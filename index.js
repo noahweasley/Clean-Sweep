@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const fs = require("fs");
 const path = require("path");
 
@@ -12,21 +11,37 @@ if (!fileDirectory) {
   fileDirectory = path.normalize(fileDirectory);
 }
 
-const files = fs.readdirSync(fileDirectory, { recursive: true });
-
-files.forEach((file) => {
-  const absoluteFile = path.join(fileDirectory, file);
-
+getFilesRecursive(fileDirectory, (file) => {
   try {
-    const fileSize = fs.statSync(absoluteFile).size;
-    console.log(`${file} - ${fileSize} bytes`);
-
+    const fileSize = fs.statSync(file).size;
+    console.log(`${file} - ${fileSize} bytes (skipping)`);
     if (fileSize <= 0) {
       // force delete all files and folders
-      fs.rmSync(absoluteFile, { recursive: true, force: true });
-      console.log(`\nDeleted ${file}\n`);
+      fs.unlinkSync(file);
+      console.log(`\nDeleted ${path.basename(file)} successfully\n`);
     }
   } catch (err) {
     console.error("\n\nError occurred: Cause - " + err.message + "\n\n");
   }
 });
+
+function getFilesRecursive(dir, callback) {
+  try {
+    const files = fs.readdirSync(dir, { recursive: true });
+
+    files.map((file) => {
+      const absoluteFile = path.join(dir, file);
+      const isFile = fs.statSync(absoluteFile).isFile();
+
+      isFile
+        ? callback(absoluteFile)
+        : getFilesRecursive(absoluteFile, callback);
+    });
+  } catch (err) {
+    if (err.code == "ENOENT") {
+      console.error("Directory does not exist");
+    } else {
+      console.error("\n\nError occurred: Cause - " + err.message + "\n\n");
+    }
+  }
+}
