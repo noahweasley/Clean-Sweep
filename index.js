@@ -5,7 +5,9 @@ const path = require("path");
 let fileDirectory = process.argv[2];
 
 if (!fileDirectory) {
-  console.log("Please specify the target file directory");
+  console.log(
+    "Please specify the target file directory!\n\nUsage: clean-sweep <directory> | csw <directory>"
+  );
   return;
 } else {
   fileDirectory = path.normalize(fileDirectory);
