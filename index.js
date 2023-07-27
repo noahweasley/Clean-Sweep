@@ -29,7 +29,7 @@ function getFilesRecursive(dir, callback) {
   try {
     const files = fs.readdirSync(dir, { recursive: true });
 
-    files.map((file) => {
+    files.forEach((file) => {
       const absoluteFile = path.join(dir, file);
       const isFile = fs.statSync(absoluteFile).isFile();
 
