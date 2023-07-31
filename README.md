@@ -29,8 +29,6 @@ clean-sweep ./music
 csw ./music
 ```
 
-_in code..._
-
 ### Installation (in code)
 
 ```bash
