@@ -1,16 +1,16 @@
 # Clean Sweep
 
-> A simple script when executed, deletes all empty files and folders in a target directory
+> Delete all empty files and folders in a target directory.
 
 ## How to Use
 
-### Installation
+### Installation (as a script)
 
 ```bash
 npm install clean-sweep -g
 ```
 
-### Usage
+### Usage (as a script)
 
 ```bash
 clean-sweep <path/to/directory>
@@ -27,4 +27,29 @@ csw <path/to/directory>
 clean-sweep ./music
 # OR
 csw ./music
+```
+
+_in code..._
+
+### Installation (in code)
+
+```bash
+npm install clean-sweep --save
+```
+
+### Usage (in code)
+
+```javascript
+const cleanSweep = require("clean-sweep");
+const fileDirectory = "<replace file directory here>";
+
+try {
+  cleanSweep.sweep(fileDirectory);
+} catch (err) {
+  if (err.code == "ENOENT") {
+    console.error("Directory does not exist");
+  } else {
+    console.error(err.message);
+  }
+}
 ```

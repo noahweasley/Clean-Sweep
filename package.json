@@ -1,11 +1,11 @@
 {
   "name": "clean-sweep",
-  "version": "0.0.2",
-  "description": "A simple script when executed, deletes all empty files and folders in a target directory",
-  "main": "index.js",
+  "version": "0.0.3",
+  "description": "Deletes all empty files and folders in a target directory",
+  "main": "./lib/sweep.js",
   "bin": {
-    "clean-sweep": "index.js",
-    "csw": "index.js"
+    "clean-sweep": "./bin/exec-sweep.js",
+    "csw": "./bin/exec-sweep.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
