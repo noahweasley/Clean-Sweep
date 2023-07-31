@@ -1,4 +1,4 @@
-const cleanSweep = require("clean-sweep");
+const cleanSweep = require("../lib/sweep");
 const fileDirectory = "./";
 
 try {

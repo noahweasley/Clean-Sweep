@@ -30,8 +30,5 @@
     "directory",
     "directories"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "clean-sweep": "^0.0.3"
-  }
+  "license": "MIT"
 }
