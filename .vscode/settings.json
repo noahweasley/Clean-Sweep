@@ -2,5 +2,6 @@
     "jira-plugin.workingProject": "",
     "cSpell.words": [
         "ENOENT"
-    ]
+    ],
+    "explorer.excludeGitIgnore": true
 }
