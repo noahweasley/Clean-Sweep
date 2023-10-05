@@ -1,6 +1,7 @@
 # Clean Sweep
 
-![license](https://img.shields.io/github/license/noahweasley/clean-sweep) ![npm downloads](https://img.shields.io/npm/dw/clean-sweep?label=NPM%20downloads&color=red)
+  ![license](https://img.shields.io/github/license/noahweasley/clean-sweep) ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/noahweasley/clean-sweep?label=Latest%20release&color=yellow) ![npm downloads](https://img.shields.io/npm/dw/clean-sweep?label=NPM%20downloads&color=red)
+
 
 > Delete all empty files and folders in a target directory.
 
