@@ -45,9 +45,9 @@ if (!argv2 || argv2 === "-h") {
       function (answer) {
         if (["yes", "y"].includes(answer.toLowerCase())) {
           if (params.includes("-v")) {
-            cleanSweep.sweep(argv2, { verbose: true });
+            cleanSweep.sweepSync(argv2, { verbose: true });
           } else {
-            cleanSweep.sweep(argv2);
+            cleanSweep.sweepSync(argv2);
           }
           prompt.close();
         } else {
