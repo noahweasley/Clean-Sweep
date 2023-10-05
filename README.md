@@ -1,5 +1,7 @@
 # Clean Sweep
 
+![license](https://img.shields.io/github/license/noahweasley/clean-sweep) ![npm downloads](https://img.shields.io/npm/dw/clean-sweep?label=NPM%20downloads&color=red)
+
 > Delete all empty files and folders in a target directory.
 
 ## How to Use
@@ -38,14 +40,14 @@ csw ./music -v
 npm install clean-sweep --save
 ```
 
-### Usage (in code)
+### Usage (in code, synchronously)
 
 ```javascript
 const cleanSweep = require("clean-sweep");
 const fileDirectory = "<replace file directory here>";
 
 try {
-  cleanSweep.sweep(fileDirectory, { verbose: true });
+  cleanSweep.sweepSync(fileDirectory, { verbose: true });
 } catch (err) {
   if (err.code == "ENOENT") {
     console.error("Directory does not exist");
@@ -53,4 +55,23 @@ try {
     console.error(err.message);
   }
 }
+```
+
+### Usage (in code, asynchronously)
+
+```javascript
+const cleanSweep = require("clean-sweep").promises;
+const fileDirectory = "./";
+
+(async function () {
+  try {
+    await cleanSweep.sweep(fileDirectory, { verbose: true });
+  } catch (err) {
+    if (err.code == "ENOENT") {
+      console.error("Directory does not exist");
+    } else {
+      console.error(err.message);
+    }
+  }
+})();
 ```
