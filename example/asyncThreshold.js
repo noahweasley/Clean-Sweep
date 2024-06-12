@@ -5,7 +5,7 @@ const fileDirectory = path.join(__dirname, "testFolder");
 
 (async function () {
   try {
-    await cleanSweep.sweep(fileDirectory, { verbose: true });
+    await cleanSweep.sweep(fileDirectory, { verbose: true, threshHold: 12 });
   } catch (err) {
     if (err.code === "ENOENT") {
       console.error("Directory does not exist");

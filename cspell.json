@@ -1,0 +1,10 @@
+{
+  "version": "0.2",
+  "ignorePaths": ["cspell.json"],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "flagWords": ["hte", "hate", "fuck"],
+  "words": ["camelcase", "ENOENT", "linebreak", "ENOENT", "noahweasley"],
+  "ignoreWords": [],
+  "import": []
+}
